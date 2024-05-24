@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Info from "../components/Info";
+import Fractaliser from "../components/Fractaliser";
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="bg-[#282828] min-h-screen text-[#f0f0f0] flex flex-col">
+    <h1
+      class="text-4xl py-12 font-bold flex items-center justify-center gap-2 w-full"
+    >
+      Fractaliser<span class="text-sm font-normal">
+        - Successor to Kami's <a href="https://translu-tint.vercel.app" class="underline underline-offset-2">TransluTint</a></span
+      >
+    </h1>
+    <div class="grow h-full w-full items-center justify-center flex">
+      <Fractaliser client:load />
+    </div>
+  </main>
+  <Info client:load />
+</Layout>
